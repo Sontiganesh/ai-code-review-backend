@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ai-code-review-backend
+    env: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/aicode-0.0.1-SNAPSHOT.jar
+    plan: free
+    branch: main
+    autoDeploy: true
